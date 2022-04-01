@@ -3,7 +3,6 @@ project(GOL)
 
 set(CMAKE_CXX_STANDARD 17)
 
-
 if( WIN32 )
     add_compile_options(-W3 -WX)
 
@@ -18,7 +17,6 @@ add_executable(
     GameOfLife
     GameOfLife.cpp
     GameOfLife/Constants.h
-    GameOfLife/Printer.h
+    GameOfLife/CommonStateLogic.h
     GameOfLife/State.h
-    GameOfLife/RecursiveStateProcessor.h
 )

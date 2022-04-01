@@ -1,14 +1,13 @@
 #include "GameOfLife/Constants.h"
-#include "GameOfLife/RecursiveStateProcessor.h"
-#include "GameOfLife/Printer.h"
+#include "GameOfLife/State.h"
 
 int main()
 {
     using namespace GameOfLife;
 
-    constexpr RecursiveStateProcessor<Constants::Iterations> stateProcessor;
-    constexpr auto finalState = stateProcessor.Process(Constants::InitialGrid);
-    Print(finalState);
+    constexpr State<Constants::Width, Constants::Height, Constants::Iterations> states{Constants::InitialGrid};
+
+    states.Print();
 
     return 0;
 }
